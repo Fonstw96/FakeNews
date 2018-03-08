@@ -22,7 +22,7 @@ public class PlayerMoney : MonoBehaviour
             // Poster money
             iMoney -= iPosterCost;
 
-            Instantiate(tPoster, transform.position, new Quaternion());
+            Instantiate(tPoster, new Vector3(transform.position.x, .41f, transform.position.z), new Quaternion(0, 45, 0, 1));
         }
 	}
 }
