@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 54026733746906038}
   - component: {fileID: 65788491201170306}
   - component: {fileID: 114957828048131210}
-  - component: {fileID: 114611440072469136}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -72,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060171987529496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 100, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4382175233919188}
@@ -86,26 +85,26 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1630915279691002}
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 5, z: -5}
+  m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
+  m_LocalPosition: {x: 0, y: 4, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4274597943207292}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
 --- !u!4 &4550571765176468
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1720709175180542}
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
   m_LocalPosition: {x: 0, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4274597943207292}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
 --- !u!20 &20734279581950148
 Camera:
   m_ObjectHideFlags: 1
@@ -190,19 +189,6 @@ MonoBehaviour:
   moveSpeed: 8
   theRB: {fileID: 54026733746906038}
   jumpForce: 5
---- !u!114 &114611440072469136
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1060171987529496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 973ef062a98c4e8458cad90f43ba3c5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beginMoney: 100
-  tPoster: {fileID: 4393503259239220, guid: 9df575423764c8a419a77c86dbc462fe, type: 2}
 --- !u!114 &114957828048131210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beginMoney: 100
+  iMoney: 0
   tPoster: {fileID: 4393503259239220, guid: 9df575423764c8a419a77c86dbc462fe, type: 2}
 --- !u!124 &124762073705254630
 Behaviour:

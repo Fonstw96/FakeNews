@@ -5,24 +5,24 @@ using UnityEngine;
 public class PlayerMoney : MonoBehaviour
 {
     public int beginMoney = 100;
-    private int iMoney;
-    public Transform tPoster;
-    private const int iPosterCost = 10;
+    public int iMoney;
+    public Object tPoster;
+    public const int iPosterCost = 10;
 
     void Start ()
     {
         iMoney = beginMoney;
     }
 
-    void Update ()
+    private void OnCollisionStay(Collision other)
     {
-        // if interaction button and enough money for a poster
-		if (Input.GetButtonDown("Fire1") && iMoney > iPosterCost)
+        // If touching a Building while pushing the Interact button and having enough money for the poster...
+        if (other.collider.tag == "Building" && Input.GetButtonDown("Fire1") && iMoney > iPosterCost)
         {
-            // Poster money
+            // Lose poster money
             iMoney -= iPosterCost;
-
-            Instantiate(tPoster, new Vector3(transform.position.x, .41f, transform.position.z), new Quaternion(0, 45, 0, 1));
+            // Spawn a poster at the building's position angled 45°
+            Instantiate(tPoster, new Vector3(other.transform.position.x, .41f, other.transform.position.z), new Quaternion(0, 45, 0, 1));
         }
-	}
+    }
 }
