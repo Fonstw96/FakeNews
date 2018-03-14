@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135294448110125920}
   - component: {fileID: 114229588662783186}
   m_Layer: 0
-  m_Name: Poster
+  m_Name: Poster2
   m_TagString: Poster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca4391d320d35a41a54c9f181245d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iOwner: 0
+  iOwner: 2
 --- !u!135 &135294448110125920
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -106,5 +106,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.5
+  m_Radius: 12
   m_Center: {x: 0, y: 0, z: 0}

@@ -44,7 +44,6 @@ public class VillagerMovement : MonoBehaviour
 
             // Actually going into a different direction
             iDirection = Random.Range(0, 4);
-            print("New direction: " + iDirection);
         }
     }
 }

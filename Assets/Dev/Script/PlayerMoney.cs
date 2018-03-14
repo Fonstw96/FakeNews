@@ -22,7 +22,7 @@ public class PlayerMoney : MonoBehaviour
             // Lose poster money
             iMoney -= iPosterCost;
             // Spawn a poster at the building's position angled 45°
-            Instantiate(tPoster, new Vector3(other.transform.position.x, .41f, other.transform.position.z), new Quaternion(0, 45, 0, 1));
+            Instantiate(tPoster, new Vector3(transform.position.x, .41f, transform.position.z), new Quaternion());
         }
     }
 }

@@ -17,7 +17,7 @@ public class ControllerProgress : MonoBehaviour
             tBarSize = tRedUIBar.GetComponent<RectTransform>();
     }
 
-    private void ChangeProgress()
+    public void ChangeProgress()
     {
         float fRedvsBlue;
 
