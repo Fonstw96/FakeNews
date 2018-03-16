@@ -39,6 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4839623058323128}
   - component: {fileID: 212740149018454948}
+  - component: {fileID: 95759121145373258}
   m_Layer: 0
   m_Name: Maincharacter_Idle 1
   m_TagString: Untagged
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060171987529496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 0.43, z: -11.12}
+  m_LocalPosition: {x: -2, y: 0.43, z: -11.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4382175233919188}
@@ -100,7 +101,7 @@ Transform:
   m_GameObject: {fileID: 1228947473244080}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0.6, z: 0.491}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 4274597943207292}
   m_RootOrder: 1
@@ -125,7 +126,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 14
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -175,6 +176,23 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1630915279691002}
   m_Enabled: 1
+--- !u!95 &95759121145373258
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228947473244080}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: f8fc3098f165b6f48b3e54898de73ee6, type: 3}
+  m_Controller: {fileID: 9100000, guid: 285502dba548c424aaec3f25c526c5c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114539831992710196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,9 +204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239e5fde12ce4194394eda650f0d380e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sPlayerNo: 1
   moveSpeed: 10
   theRB: {fileID: 54026733746906038}
-  jumpForce: 3
 --- !u!114 &114957828048131210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -244,12 +262,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f4b58d86a2b0e4a48a84b5d2db01d9d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6dd1e6b85cc4cd04db0b6a7fce4389e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 14.21, y: 20}
+  m_Size: {x: 2.15, y: 5.85}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

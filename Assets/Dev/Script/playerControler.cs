@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class playerControler : MonoBehaviour
 {
-
+    public string sPlayerNo = "1";
     public float moveSpeed;
     public Rigidbody theRB;
-    public float jumpForce;
+    //public float jumpForce;
 
     // Use this for initialization
     void Start()
@@ -18,11 +18,11 @@ public class playerControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        theRB.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
+        theRB.velocity = new Vector3(Input.GetAxis("Horizontal"+sPlayerNo) * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical"+sPlayerNo) * moveSpeed);
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            theRB.velocity = new Vector3(theRB.velocity.x, jumpForce, theRB.velocity.z);
-        }
+        //if (Input.GetButtonDown("Jump"))
+        //{
+        //    theRB.velocity = new Vector3(theRB.velocity.x, jumpForce, theRB.velocity.z);
+        //}
     }
 }
