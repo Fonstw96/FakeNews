@@ -1914,7 +1914,7 @@ Prefab:
         type: 2}
     - target: {fileID: 1630915279691002, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212740149018454948, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
         type: 2}
@@ -1935,6 +1935,21 @@ Prefab:
     - target: {fileID: 1060171987529496, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20734279581950148, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 20734279581950148, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 81621008700475162, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
@@ -2381,6 +2396,11 @@ Prefab:
     - target: {fileID: 1060171987529496, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
       propertyPath: m_Name
       value: Player 1 (Blue)
+      objectReference: {fileID: 0}
+    - target: {fileID: 20734279581950148, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
