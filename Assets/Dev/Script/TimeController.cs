@@ -33,17 +33,16 @@ public class TimeController : MonoBehaviour
         }
 
         // Change time text so the player knows
-        texClock.text = Mathf.Ceil(fStartTime).ToString(); 
+        texClock.text = Mathf.Ceil(fStartTime).ToString();
 	}
 
     private IEnumerator WaitInput()
     {
-        //bool bWait = true;
         while (!Input.GetButton("Interact1"))
             yield return null;
 
-        goScreenFader.SetActive(false);
-        goWinText.SetActive(false);
-        SceneManager.LoadScene("Main");
+        //goScreenFader.SetActive(false);
+        //goWinText.SetActive(false);
+        //SceneManager.LoadScene("Main");
     }
 }

@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a9a4b7fbf60bd4fa2cac70c561cdfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fStartTime: 5
+  fStartTime: 180
   goScreenFader: {fileID: 1168767664846918}
   goWinText: {fileID: 1035615371477996}
 --- !u!114 &114237231529002430
