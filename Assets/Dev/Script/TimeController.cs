@@ -14,6 +14,8 @@ public class TimeController : MonoBehaviour
     public GameObject goUICanvas;
     private ControllerProgress GameController;
 
+    private bool bInGame = true;
+
     private void Start()
     {
         texClock = GetComponent<Text>();
@@ -36,34 +38,50 @@ public class TimeController : MonoBehaviour
         }
         else   // Out of time? Reset the level
         {
-            goScreenFader.SetActive(true);
-            goWinText.SetActive(true);
+            if (bInGame)
+            {
+                bInGame = false;
 
-            if (GameController.iBlueVillagers > GameController.iRedVillagers)
-            {
-            	//GameController.iWins[0] += 1;
-                goWinText.GetComponent<Text>().text = "Player 1 won!";
-            }
-            else if (GameController.iBlueVillagers < GameController.iRedVillagers)
-            {
-            	//GameController.iWins[0]++;
-                goWinText.GetComponent<Text>().text = "Player 2 won!";
-            }
-            else   // No more, no less, so equal scores!
-            {
-            	//GameController.iWins[0]++;
-                goWinText.GetComponent<Text>().text = "It's a draw!";
+                goScreenFader.SetActive(true);
+                goWinText.SetActive(true);
+
+                if (GameController.iBlueVillagers > GameController.iRedVillagers)
+                {
+                    PlayerPrefs.SetInt("blueWins", PlayerPrefs.GetInt("blueWins", 0) + 1);
+                    goWinText.GetComponent<Text>().text = "Player 1 won this round!";
+                }
+                else if (GameController.iBlueVillagers < GameController.iRedVillagers)
+                {
+                    PlayerPrefs.SetInt("redWins", PlayerPrefs.GetInt("redWins", 0) + 1);
+                    goWinText.GetComponent<Text>().text = "Player 2 won this round!";
+                }
+                else   // No more, no less, so equal scores!
+                {
+                    PlayerPrefs.SetInt("blueWins", PlayerPrefs.GetInt("blueWins", 0) + 1);
+                    PlayerPrefs.SetInt("redWins", PlayerPrefs.GetInt("redWins", 0) + 1);
+                    goWinText.GetComponent<Text>().text = "It's a draw!";
+                }
+
+                if (PlayerPrefs.GetInt("blueWins") >= 2 && PlayerPrefs.GetInt("redWins") >= 2)
+                    goWinText.GetComponent<Text>().text = "Congratulations! You are both horrible!";
+                else if (PlayerPrefs.GetInt("blueWins") >= 2)
+                    goWinText.GetComponent<Text>().text = "Congratulations player 1! You are the biggest liar!";
+                else if (PlayerPrefs.GetInt("redWins") >= 2)
+                    goWinText.GetComponent<Text>().text = "Congratulations player 2! You are the biggest liar!";
+
+                if (PlayerPrefs.GetInt("blueWins") >= 2 || PlayerPrefs.GetInt("redWins") >= 2)
+                {
+                    PlayerPrefs.SetInt("blueWins", 0);
+                    PlayerPrefs.SetInt("redWins", 0);
+                }
             }
 
             StartCoroutine(WaitInput());
-            //SceneManager.LoadScene("Main");
         }
     }
 
     IEnumerator WaitInput()
     {
-        //yield return new WaitForSeconds(4);
-
         while (!Input.GetButton("Interact1") && !Input.GetButton("Interact2") && !Input.GetButton("Escape"))
             yield return null;
         

@@ -34,7 +34,7 @@ public class playerControler : MonoBehaviour
 
         if (Input.GetAxis("Horizontal" + sPlayerNo) > 0)
         {
-            Debug.Log("right");
+            //Debug.Log("right");
             anim.Play("WalkRight");
             anim.Play("Player2Right");
 
@@ -42,7 +42,7 @@ public class playerControler : MonoBehaviour
 
         if (Input.GetAxis("Horizontal" + sPlayerNo) < 0)
         {
-            Debug.Log("left");
+            //Debug.Log("left");
             anim.Play("WalkLeft");
             anim.Play("Player2Left");
         }
