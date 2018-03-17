@@ -11,10 +11,17 @@ public class TimeController : MonoBehaviour
 
     public GameObject goScreenFader;
     public GameObject goWinText;
+    public GameObject goUICanvas;
+    private ControllerProgress GameController;
 
     private void Start()
     {
         texClock = GetComponent<Text>();
+
+        if (goUICanvas != null)
+            GameController = goUICanvas.GetComponent<ControllerProgress>();
+        else
+            print("No UI Canvas attached!");
     }
 
     void Update ()
@@ -26,23 +33,31 @@ public class TimeController : MonoBehaviour
         {
             goScreenFader.SetActive(true);
             goWinText.SetActive(true);
-            goWinText.GetComponent<Text>().text = "Player x won!";
 
-            WaitInput();
+            if (GameController.iBlueVillagers > GameController.iRedVillagers)
+                goWinText.GetComponent<Text>().text = "Player 1 won!";
+            else if (GameController.iBlueVillagers < GameController.iRedVillagers)
+                goWinText.GetComponent<Text>().text = "Player 2 won!";
+            else   // No more, no less, so equal scores!
+                goWinText.GetComponent<Text>().text = "It's a draw!";
+
+            //WaitInput();
             SceneManager.LoadScene("Main");
         }
 
         // Change time text so the player knows
         texClock.text = Mathf.Ceil(fStartTime).ToString();
-	}
-
-    private IEnumerator WaitInput()
-    {
-        while (!Input.GetButton("Interact1"))
-            yield return null;
-
-        //goScreenFader.SetActive(false);
-        //goWinText.SetActive(false);
-        //SceneManager.LoadScene("Main");
     }
+
+    //IEnumerator WaitInput()
+    //{
+    //    //yield return new WaitForSeconds(4);
+
+    //    while (!Input.GetButton("Interact1"))
+    //        yield return null;
+
+    //    goScreenFader.SetActive(false);
+    //    goWinText.SetActive(false);
+    //    SceneManager.LoadScene("Main");
+    //}
 }
