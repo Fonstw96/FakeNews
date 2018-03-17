@@ -33,33 +33,36 @@ public class VillagerIntelligence : MonoBehaviour
                         UIController.iBlueVillagers -= 1;
                         UIController.iRedVillagers += 1;
                         break;
-                    default:   // I used to be neutral or a clitch
+                    default:   // I used to be neutral
                         if (NewViewPoint == 1)   // I will be red
                             UIController.iRedVillagers += 1;
                         else if (NewViewPoint == 2)   // I will be blue
                             UIController.iBlueVillagers += 1;
 
-                        // If I will be neutral or a clitch, don't do anything...
+                        // If I will be neutral, don't do anything...
                         break;
                 }
-                UIController.ChangeProgress();
+
+                // Actually change view
+                iPoliticalView = NewViewPoint;
+
+                // Change colour accordingly
+                switch (iPoliticalView)
+                {
+                    case 1:
+                        MySprite.GetComponent<SpriteRenderer>().color = new Color32(65, 66, 100, 255);
+                        break;
+                    case 2:
+                        MySprite.GetComponent<SpriteRenderer>().color = new Color32(184, 64, 49, 255);
+                        break;
+                    default:   // Neutral
+                        MySprite.GetComponent<SpriteRenderer>().color = new Color32(128, 128, 128, 255);
+                        break;
+                }
             }
         }
         else
             return "Set view to either 0, 1 or 2";
-
-        switch (iPoliticalView)
-        {
-            case 1:
-                MySprite.GetComponent<SpriteRenderer>().color = Color.blue;
-                break;
-            case 2:
-                MySprite.GetComponent<SpriteRenderer>().color = Color.red;
-                break;
-            default:   // Neutral
-                MySprite.GetComponent<SpriteRenderer>().color = Color.yellow;
-                break;
-        }
 
         return "👍";
     }

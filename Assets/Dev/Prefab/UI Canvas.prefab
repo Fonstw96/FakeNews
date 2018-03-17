@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222874180237599382}
   - component: {fileID: 114014438825598414}
   m_Layer: 5
-  m_Name: BarRed
+  m_Name: BarBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 222021901486488844}
   - component: {fileID: 114167135220609924}
   m_Layer: 5
-  m_Name: BarBlue
+  m_Name: BarRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9632353, g: 0.2465726, b: 0.035413038, a: 1}
+  m_Color: {r: 0.25490198, g: 0.25882354, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21085638, g: 0.524281, b: 0.9558824, a: 1}
+  m_Color: {r: 0.72156864, g: 0.2509804, b: 0.19215687, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iRedVillagers: 0
   iBlueVillagers: 0
-  tRedUIBar: {fileID: 224907352054974592}
+  tBlueUIBar: {fileID: 224907352054974592}
 --- !u!114 &114939493612249134
 MonoBehaviour:
   m_ObjectHideFlags: 1

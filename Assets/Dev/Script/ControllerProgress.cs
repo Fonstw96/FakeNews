@@ -6,29 +6,34 @@ public class ControllerProgress : MonoBehaviour
 {
     public int iRedVillagers = 0;
     public int iBlueVillagers = 0;
+    private float fBluevsRed = .5f;
 
-    public Transform tRedUIBar;
+    public Transform tBlueUIBar;
     private RectTransform tBarSize;
 
     void Start()
     {
         // Take red bar's size component, for easier coding later on
-        if (tRedUIBar != null)
-            tBarSize = tRedUIBar.GetComponent<RectTransform>();
+        if (tBlueUIBar != null)
+            tBarSize = tBlueUIBar.GetComponent<RectTransform>();
+    }
+
+    private void Update()
+    {
+        ChangeProgress();
+        //print("B: " + iBlueVillagers + ", R: " + iRedVillagers);
     }
 
     public void ChangeProgress()
     {
-        float fRedvsBlue;
-
         // Just in case we end up dividing by zero...
-        if (iRedVillagers == 0 && iBlueVillagers == 0)
-            fRedvsBlue = .5f;
+        if (iBlueVillagers == 0 && iRedVillagers == 0)
+            fBluevsRed = .5f;
         // There won't be any scary divisions? Good, calculate % red villagers vs % blue villagers and store that!
         else
-            fRedvsBlue = iRedVillagers / (float)(iRedVillagers + iBlueVillagers);
+            fBluevsRed = iBlueVillagers / (float)(iBlueVillagers + iRedVillagers);
 
         // Scale red bar's width according to % red villagers versus % blue villagers
-        tBarSize.sizeDelta = new Vector2(600 * fRedvsBlue, 50);
+        tBarSize.sizeDelta = new Vector2(600 * fBluevsRed, 50);
     }
 }
