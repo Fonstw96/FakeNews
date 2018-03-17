@@ -35,9 +35,9 @@ public class VillagerIntelligence : MonoBehaviour
                         break;
                     default:   // I used to be neutral
                         if (NewViewPoint == 1)   // I will be red
-                            UIController.iRedVillagers += 1;
-                        else if (NewViewPoint == 2)   // I will be blue
                             UIController.iBlueVillagers += 1;
+                        else if (NewViewPoint == 2)   // I will be blue
+                            UIController.iRedVillagers += 1;
 
                         // If I will be neutral, don't do anything...
                         break;
