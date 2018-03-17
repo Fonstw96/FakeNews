@@ -7,11 +7,14 @@ using UnityEngine.SceneManagement;
 public class TimeController : MonoBehaviour
 {
     public float fStartTime = 500;
-    private Text tText;
+    private Text texClock;
+
+    public GameObject goScreenFader;
+    public GameObject goWinText;
 
     private void Start()
     {
-        tText = GetComponent<Text>();
+        texClock = GetComponent<Text>();
     }
 
     void Update ()

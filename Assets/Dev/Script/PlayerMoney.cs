@@ -7,16 +7,16 @@ public class PlayerMoney : MonoBehaviour
 {
     public int beginMoney = 100;
     public int iMoney;
-    public Object tPoster;
+    public GameObject goPoster;
     public const int iPosterCost = 10;
     private string sPlayerNo = "1";
-    public Transform tMoneyTextBox;
+    public GameObject goMoneyTextBox;
     private Text tMoneyText;
 
     void Start ()
     {
-        if (tMoneyTextBox != null)
-            tMoneyText = tMoneyTextBox.GetComponent<Text>();
+        if (goMoneyTextBox != null)
+            tMoneyText = goMoneyTextBox.GetComponent<Text>();
         else
             print("No textbox defined!");
 
@@ -35,7 +35,7 @@ public class PlayerMoney : MonoBehaviour
             // Lose poster money
             ChangeMoney(-iPosterCost);
             // Spawn a poster at the building's position angled 45°
-            Instantiate(tPoster, new Vector3(transform.position.x, .41f, transform.position.z), new Quaternion());
+            Instantiate(goPoster, new Vector3(transform.position.x, .41f, transform.position.z), new Quaternion());
         }
     }
 

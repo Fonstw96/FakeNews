@@ -8,14 +8,14 @@ public class ControllerProgress : MonoBehaviour
     public int iBlueVillagers = 0;
     private float fBluevsRed = .5f;
 
-    public Transform tBlueUIBar;
+    public GameObject goBlueUIBar;
     private RectTransform tBarSize;
 
     void Start()
     {
         // Take red bar's size component, for easier coding later on
-        if (tBlueUIBar != null)
-            tBarSize = tBlueUIBar.GetComponent<RectTransform>();
+        if (goBlueUIBar != null)
+            tBarSize = goBlueUIBar.GetComponent<RectTransform>();
     }
 
     private void Update()
