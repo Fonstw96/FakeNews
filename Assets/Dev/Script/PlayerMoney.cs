@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMoney : MonoBehaviour
 {
@@ -9,10 +10,17 @@ public class PlayerMoney : MonoBehaviour
     public Object tPoster;
     public const int iPosterCost = 10;
     private string sPlayerNo = "1";
+    public Transform tMoneyTextBox;
+    private Text tMoneyText;
 
     void Start ()
     {
-        iMoney = beginMoney;
+        if (tMoneyTextBox != null)
+            tMoneyText = tMoneyTextBox.GetComponent<Text>();
+        else
+            print("No textbox defined!");
+
+        ChangeMoney(beginMoney);
 
         // If this object also has a player controller, use the same player number, otherwise the default value given at the declaration above
         if (GetComponent<playerControler>() != null)
@@ -25,9 +33,18 @@ public class PlayerMoney : MonoBehaviour
         if (other.collider.tag == "Building" && Input.GetButtonDown("Interact"+sPlayerNo) && iMoney > iPosterCost)
         {
             // Lose poster money
-            iMoney -= iPosterCost;
+            ChangeMoney(-iPosterCost);
             // Spawn a poster at the building's position angled 45°
             Instantiate(tPoster, new Vector3(transform.position.x, .41f, transform.position.z), new Quaternion());
         }
+    }
+
+    private void ChangeMoney(int iAddedMoney)
+    {
+        iMoney += iAddedMoney;
+        if (iMoney < 0)
+            iMoney = 0;
+
+        tMoneyText.text = "Money    " + iMoney;
     }
 }

@@ -221,6 +221,7 @@ MonoBehaviour:
   beginMoney: 100
   iMoney: 0
   tPoster: {fileID: 1281279572868322, guid: 77704faa2c4d3d14090bcfb6edbc855e, type: 2}
+  tMoneyTextBox: {fileID: 0}
 --- !u!124 &124762073705254630
 Behaviour:
   m_ObjectHideFlags: 1
