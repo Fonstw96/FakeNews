@@ -1759,6 +1759,16 @@ Prefab:
       propertyPath: tMoneyTextBox
       value: 
       objectReference: {fileID: 1057159237}
+    - target: {fileID: 1228947473244080, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 114539831992710196, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1688050841}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
   m_IsPrefabParent: 0
@@ -2176,9 +2186,34 @@ Prefab:
       propertyPath: m_Name
       value: Player 1 (Blue)
       objectReference: {fileID: 0}
+    - target: {fileID: 95759121145373258, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 79027cae43be0974d8959443da787a8d, type: 2}
+    - target: {fileID: 114539831992710196, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1694428942}
+    - target: {fileID: 1228947473244080, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1688050841 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1228947473244080, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+    type: 2}
+  m_PrefabInternal: {fileID: 997426039}
+--- !u!1 &1694428942 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1228947473244080, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536455002}
 --- !u!1 &1705853014
 GameObject:
   m_ObjectHideFlags: 0
