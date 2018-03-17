@@ -176,6 +176,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dad5be55d99ce8c489015879e9c7aa99, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &270762935 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1549245115319244, guid: acba51f462f40b8449394f55fbc25970,
+    type: 2}
+  m_PrefabInternal: {fileID: 2049518363}
+--- !u!1 &291027888 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1379947654680218, guid: acba51f462f40b8449394f55fbc25970,
+    type: 2}
+  m_PrefabInternal: {fileID: 2049518363}
 --- !u!1001 &355165231
 Prefab:
   m_ObjectHideFlags: 0
@@ -1779,6 +1789,17 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ffcdde666b7ab57428472f66c2c37ba7, type: 2}
+    - target: {fileID: 114957828048131210, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: goPoster
+      value: 
+      objectReference: {fileID: 1281279572868322, guid: bef5037d0ad4916438c04bc124ba1f3a,
+        type: 2}
+    - target: {fileID: 114957828048131210, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: goMoneyTextBox
+      value: 
+      objectReference: {fileID: 270762935}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
   m_IsPrefabParent: 0
@@ -2052,11 +2073,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9200da6b9a62aa8438a69643b3a6e79f, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &1344132859 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224190982813955402, guid: acba51f462f40b8449394f55fbc25970,
-    type: 2}
-  m_PrefabInternal: {fileID: 2049518363}
 --- !u!1 &1361879963
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,42 +2203,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114957828048131210, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
-        type: 2}
-      propertyPath: tMoneyTextBox
-      value: 
-      objectReference: {fileID: 1344132859}
     - target: {fileID: 1060171987529496, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
       propertyPath: m_Name
       value: Player 1 (Blue)
       objectReference: {fileID: 0}
-    - target: {fileID: 95759121145373258, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+    - target: {fileID: 114957828048131210, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
         type: 2}
-      propertyPath: m_Controller
+      propertyPath: goMoneyTextBox
       value: 
-      objectReference: {fileID: 9100000, guid: 79027cae43be0974d8959443da787a8d, type: 2}
-    - target: {fileID: 114539831992710196, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
-        type: 2}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 1694428942}
-    - target: {fileID: 1228947473244080, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 4839623058323128, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839623058323128, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839623058323128, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.38
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 291027888}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
   m_IsPrefabParent: 0
@@ -2231,11 +2220,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1228947473244080, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
     type: 2}
   m_PrefabInternal: {fileID: 997426039}
---- !u!1 &1694428942 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1228947473244080, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1536455002}
 --- !u!1 &1705853014
 GameObject:
   m_ObjectHideFlags: 0

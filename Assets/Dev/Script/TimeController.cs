@@ -20,13 +20,30 @@ public class TimeController : MonoBehaviour
     void Update ()
     {
         // Take away 1 frame of milliseconds
-        fStartTime -= Time.deltaTime;
+        if (fStartTime > 0)
+            fStartTime -= Time.deltaTime;
+        else   // Out of time? Reset the level
+        {
+            goScreenFader.SetActive(true);
+            goWinText.SetActive(true);
+            goWinText.GetComponent<Text>().text = "Player x won!";
 
-        // Out of time? Reset the level
-        if (fStartTime <= 0)
+            WaitInput();
             SceneManager.LoadScene("Main");
+        }
 
         // Change time text so the player knows
-        tText.text = Mathf.Ceil(fStartTime).ToString();
+        texClock.text = Mathf.Ceil(fStartTime).ToString();
 	}
+
+    private IEnumerator WaitInput()
+    {
+        //bool bWait = true;
+        while (!Input.GetButton("Interact1"))
+            yield return null;
+
+        goScreenFader.SetActive(false);
+        goWinText.SetActive(false);
+        SceneManager.LoadScene("Main");
+    }
 }
