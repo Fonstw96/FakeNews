@@ -19,6 +19,7 @@ public class playerControler : MonoBehaviour
         anim = character.GetComponent<Animator>();
 
         anim.Play("Idle");
+        anim.Play("Player2Idle");
     }
 
     // Update is called once per frame
@@ -35,14 +36,15 @@ public class playerControler : MonoBehaviour
         {
             Debug.Log("right");
             anim.Play("WalkRight");
-            
+            anim.Play("Player2Right");
+
         }
 
         if (Input.GetAxis("Horizontal" + sPlayerNo) < 0)
         {
             Debug.Log("left");
             anim.Play("WalkLeft");
-            
+            anim.Play("Player2Left");
         }
 
     }
