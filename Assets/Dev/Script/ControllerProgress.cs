@@ -7,12 +7,16 @@ public class ControllerProgress : MonoBehaviour
     public int iRedVillagers = 0;
     public int iBlueVillagers = 0;
     private float fBluevsRed = .5f;
+    public int[] iWins;   // 0 = p1_wins; 1 = p2_wins
 
     public GameObject goBlueUIBar;
     private RectTransform tBarSize;
 
     void Start()
     {
+        iWins = new int[2];
+        print("B_win: " + iWins[0] + ", R_win: " + iWins[1]);
+
         // Take red bar's size component, for easier coding later on
         if (goBlueUIBar != null)
             tBarSize = goBlueUIBar.GetComponent<RectTransform>();

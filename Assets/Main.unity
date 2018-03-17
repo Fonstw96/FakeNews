@@ -176,6 +176,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dad5be55d99ce8c489015879e9c7aa99, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &229396527 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1983359207482214, guid: acba51f462f40b8449394f55fbc25970,
+    type: 2}
+  m_PrefabInternal: {fileID: 2049518363}
 --- !u!1 &270762935 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1549245115319244, guid: acba51f462f40b8449394f55fbc25970,
@@ -2616,6 +2621,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114182935922055984, guid: acba51f462f40b8449394f55fbc25970,
+        type: 2}
+      propertyPath: goUICanvas
+      value: 
+      objectReference: {fileID: 229396527}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acba51f462f40b8449394f55fbc25970, type: 2}
   m_IsPrefabParent: 0
