@@ -2523,16 +2523,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114783327449027072, guid: acba51f462f40b8449394f55fbc25970,
-        type: 2}
-      propertyPath: iRedVillagers
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114783327449027072, guid: acba51f462f40b8449394f55fbc25970,
-        type: 2}
-      propertyPath: iBlueVillagers
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acba51f462f40b8449394f55fbc25970, type: 2}
   m_IsPrefabParent: 0
