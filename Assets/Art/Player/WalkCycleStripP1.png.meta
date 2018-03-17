@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4fd6193ffde7e4842a3e9a2e170fc153
-timeCreated: 1521044683
+guid: 31cbbbe73f7eff64780cd3032ee549af
+timeCreated: 1521313537
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -95,12 +95,12 @@ TextureImporter:
       name: WalkCycleStripP1_0
       rect:
         serializedVersion: 2
-        x: 340
-        y: 18
-        width: 744
-        height: 1941
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 84
+        y: 4
+        width: 188
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -109,12 +109,12 @@ TextureImporter:
       name: WalkCycleStripP1_1
       rect:
         serializedVersion: 2
-        x: 1834
-        y: 12
-        width: 721
-        height: 1912
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 458
+        y: 2
+        width: 181
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -123,12 +123,12 @@ TextureImporter:
       name: WalkCycleStripP1_2
       rect:
         serializedVersion: 2
-        x: 3229
-        y: 123
-        width: 17
-        height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 808
+        y: 31
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -137,12 +137,12 @@ TextureImporter:
       name: WalkCycleStripP1_3
       rect:
         serializedVersion: 2
-        x: 3334
-        y: 18
-        width: 691
-        height: 1947
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 833
+        y: 4
+        width: 174
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: WalkCycleStripP1_4
       rect:
         serializedVersion: 2
-        x: 4547
-        y: 123
-        width: 12
-        height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1136
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,12 +165,12 @@ TextureImporter:
       name: WalkCycleStripP1_5
       rect:
         serializedVersion: 2
-        x: 4840
-        y: 18
-        width: 691
-        height: 1982
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1209
+        y: 4
+        width: 174
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: WalkCycleStripP1_6
       rect:
         serializedVersion: 2
-        x: 6340
-        y: 18
-        width: 744
-        height: 1941
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1584
+        y: 4
+        width: 188
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,12 +193,12 @@ TextureImporter:
       name: WalkCycleStripP1_7
       rect:
         serializedVersion: 2
-        x: 7840
-        y: 18
-        width: 726
-        height: 1906
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1959
+        y: 4
+        width: 183
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,12 +207,12 @@ TextureImporter:
       name: WalkCycleStripP1_8
       rect:
         serializedVersion: 2
-        x: 9229
-        y: 123
-        width: 11
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 2307
+        y: 30
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,12 +221,12 @@ TextureImporter:
       name: WalkCycleStripP1_9
       rect:
         serializedVersion: 2
-        x: 9340
-        y: 18
-        width: 691
-        height: 1941
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 2334
+        y: 4
+        width: 174
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -235,12 +235,12 @@ TextureImporter:
       name: WalkCycleStripP1_10
       rect:
         serializedVersion: 2
-        x: 10547
-        y: 123
-        width: 17
-        height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 2637
+        y: 31
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,12 +249,12 @@ TextureImporter:
       name: WalkCycleStripP1_11
       rect:
         serializedVersion: 2
-        x: 10846
-        y: 18
-        width: 691
-        height: 1982
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 2711
+        y: 4
+        width: 174
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
