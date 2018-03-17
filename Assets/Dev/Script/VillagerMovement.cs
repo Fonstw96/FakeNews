@@ -46,4 +46,9 @@ public class VillagerMovement : MonoBehaviour
             iDirection = Random.Range(0, 4);
         }
     }
+
+
+
+
+
 }

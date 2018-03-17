@@ -35,12 +35,14 @@ public class playerControler : MonoBehaviour
         {
             Debug.Log("right");
             anim.Play("WalkRight");
+            
         }
 
         if (Input.GetAxis("Horizontal" + sPlayerNo) < 0)
         {
             Debug.Log("left");
             anim.Play("WalkLeft");
+            
         }
 
     }
