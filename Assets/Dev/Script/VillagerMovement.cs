@@ -7,10 +7,17 @@ public class VillagerMovement : MonoBehaviour
     public float fWalkingSpeed = .1f;
     public int iDirection = 0;
 
+    private Animator anim;
+    public GameObject character;
+
     void Start ()
     {
         // Coroutines run alongside any other process
         StartCoroutine("WalkTurn");
+
+        anim = character.GetComponent<Animator>();
+
+        anim.Play("VillagerIdle");
     }
 
     void Update ()
@@ -24,12 +31,14 @@ public class VillagerMovement : MonoBehaviour
             case 1:   // Right
                 transform.Translate(fWalkingSpeed, 0, 0);
                 break;
+                anim.Play("VillagerRight");
             case 2:   // Down
                 transform.Translate(0, 0, -fWalkingSpeed);
                 break;
             case 3:   // Left
                 transform.Translate(-fWalkingSpeed, 0, 0);
                 break;
+                anim.Play("VillagerLeft");
         }
 	}
 
