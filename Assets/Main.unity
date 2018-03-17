@@ -1951,6 +1951,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20734279581950148, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: near clip plane
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
   m_IsPrefabParent: 0
@@ -2405,6 +2410,11 @@ Prefab:
         type: 2}
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 20734279581950148, guid: 2ca7ad92f85547342b543cd8e1e64ee7,
+        type: 2}
+      propertyPath: near clip plane
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ca7ad92f85547342b543cd8e1e64ee7, type: 2}
