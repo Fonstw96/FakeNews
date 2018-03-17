@@ -33,7 +33,7 @@ public class TimeController : MonoBehaviour
         }
 
         // Change time text so the player knows
-        texClock.text = Mathf.Ceil(fStartTime).ToString();
+        texClock.text = Mathf.Ceil(fStartTime).ToString(); 
 	}
 
     private IEnumerator WaitInput()
