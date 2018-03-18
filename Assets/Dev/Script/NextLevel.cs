@@ -1,29 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class NextLevel : MonoBehaviour {
+public class NextLevel : MonoBehaviour
+{
+    void Start()
+    {
+        PlayerPrefs.SetInt("blueWins", 0);
+        PlayerPrefs.SetInt("redWins", 0);
+    }
 
     void Update()
     {
-        if (Input.GetButton("Interact1")
-        {
-            
-        }
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (Input.GetButton("Interact1") || Input.GetButton("Interact2"))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    //void Start()
-    //{
-    //    Button b = gameObject.GetComponent<Button>();
-    //    b.onClick.AddListener(delegate () { this.LoadLevel(); });
-    //    b.onClick.AddListener(delegate () { print("Button is geklikked"); });
-    //}
-
-    
-
-
 }
