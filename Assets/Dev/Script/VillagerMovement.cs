@@ -30,15 +30,15 @@ public class VillagerMovement : MonoBehaviour
                 break;
             case 1:   // Right
                 transform.Translate(fWalkingSpeed, 0, 0);
-                break;
                 anim.Play("VillagerRight");
+                break;
             case 2:   // Down
                 transform.Translate(0, 0, -fWalkingSpeed);
                 break;
             case 3:   // Left
                 transform.Translate(-fWalkingSpeed, 0, 0);
-                break;
                 anim.Play("VillagerLeft");
+                break;
         }
 	}
 

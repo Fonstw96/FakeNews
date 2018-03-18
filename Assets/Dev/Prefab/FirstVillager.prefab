@@ -20,10 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4657139748754170}
   - component: {fileID: 212453115140654472}
+  - component: {fileID: 95348019325272728}
   m_Layer: 0
   m_Name: 2DSprite
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -53,8 +54,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1218550691951248}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0.08, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.29, z: 0.023}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 4904649761974286}
   m_RootOrder: 0
@@ -66,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1441507349926556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.47, y: 0.22, z: -2.43}
+  m_LocalPosition: {x: 0, y: 0.22, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4657139748754170}
@@ -100,6 +101,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.3, z: 0.3}
   m_Center: {x: 0, y: 0.08, z: 0}
+--- !u!95 &95348019325272728
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1218550691951248}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: f8fc3098f165b6f48b3e54898de73ee6, type: 3}
+  m_Controller: {fileID: 9100000, guid: d8197666e5ffe7c4189946a41da232ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114423274846643918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fWalkingSpeed: 0.12
   iDirection: 0
-  character: {fileID: 0}
+  character: {fileID: 1218550691951248}
 --- !u!114 &114494763730192254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,8 +179,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d2a6a57f4fec33f41a11445becd77b17, type: 3}
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0b72b75605cca4144938aae42c0d0e79, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
