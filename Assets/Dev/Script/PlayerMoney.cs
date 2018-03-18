@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerMoney : MonoBehaviour
 {
     public int beginMoney = 100;
-    public int iMoney;
+    private int iMoney;
     public GameObject goPoster;
     public const int iPosterCost = 10;
     private string sPlayerNo = "1";
@@ -39,7 +39,7 @@ public class PlayerMoney : MonoBehaviour
         }
     }
 
-    private void ChangeMoney(int iAddedMoney)
+    public void ChangeMoney(int iAddedMoney)
     {
         iMoney += iAddedMoney;
         if (iMoney < 0)
