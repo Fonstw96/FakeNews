@@ -63,11 +63,12 @@ public class TimeController : MonoBehaviour
                 }
 
                 if (PlayerPrefs.GetInt("blueWins") >= 2 && PlayerPrefs.GetInt("redWins") >= 2)
-                    goWinText.GetComponent<Text>().text = "Congratulations! You are both horrible!";
+                    goWinText.GetComponent<Text>().text = "Congratulations! \n You are both horrible!";
                 else if (PlayerPrefs.GetInt("blueWins") >= 2)
-                    goWinText.GetComponent<Text>().text = "Congratulations player 1! You are the biggest liar!";
+                    goWinText.GetComponent<Text>().text = "Congratulations player 1! \n You are the biggest liar!";
                 else if (PlayerPrefs.GetInt("redWins") >= 2)
-                    goWinText.GetComponent<Text>().text = "Congratulations player 2! You are the biggest liar!";
+                    goWinText.GetComponent<Text>().text = "Congratulations player 2! \n You are the biggest liar!";
+                GameController.ShowWins();
 
                 if (PlayerPrefs.GetInt("blueWins") >= 2 || PlayerPrefs.GetInt("redWins") >= 2)
                 {

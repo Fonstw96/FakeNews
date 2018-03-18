@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ControllerProgress : MonoBehaviour
 {
@@ -11,8 +12,12 @@ public class ControllerProgress : MonoBehaviour
     public GameObject goBlueUIBar;
     private RectTransform tBarSize;
 
+    public GameObject[] goWinOrb;   // Please set objects 0..3 here kthnxbye
+
     void Start()
     {
+        ShowWins();
+
         // Take red bar's size component, for easier coding later on
         if (goBlueUIBar != null)
             tBarSize = goBlueUIBar.GetComponent<RectTransform>();
@@ -35,5 +40,23 @@ public class ControllerProgress : MonoBehaviour
 
         // Scale red bar's width according to % red villagers versus % blue villagers
         tBarSize.sizeDelta = new Vector2(600 * fBluevsRed, 50);
+    }
+
+    public void ShowWins()
+    {
+        // For easier coding
+        int blueWins = PlayerPrefs.GetInt("blueWins");
+        int redWins = PlayerPrefs.GetInt("redWins");
+
+        // Show how many wins someone has
+        if (blueWins >= 1)
+            goWinOrb[1].SetActive(true);
+        if (blueWins >= 2)
+            goWinOrb[0].SetActive(true);
+        if (redWins >= 1)
+            goWinOrb[2].SetActive(true);
+        if (redWins >= 2)
+            goWinOrb[3].SetActive(true);
+
     }
 }

@@ -30,7 +30,7 @@ public class PlayerMoney : MonoBehaviour
     private void OnCollisionStay(Collision other)
     {
         // If touching a Building while pushing the Interact button and having enough money for the poster...
-        if (other.collider.tag == "Building" && Input.GetButtonDown("Interact"+sPlayerNo) && iMoney > iPosterCost)
+        if (other.collider.tag == "Building" && Input.GetButtonDown("Interact"+sPlayerNo) && iMoney >= iPosterCost)
         {
             // Lose poster money
             ChangeMoney(-iPosterCost);

@@ -25,13 +25,13 @@ public class VillagerIntelligence : MonoBehaviour
             {
                 switch (iPoliticalView)
                 {
-                    case 1:   // I used to be red
-                        UIController.iRedVillagers -= 1;
-                        UIController.iBlueVillagers += 1;
-                        break;
-                    case 2:   // I used to be blue
+                    case 1:   // I used to be blue
                         UIController.iBlueVillagers -= 1;
                         UIController.iRedVillagers += 1;
+                        break;
+                    case 2:   // I used to be red
+                        UIController.iBlueVillagers += 1;
+                        UIController.iRedVillagers -= 1;
                         break;
                     default:   // I used to be neutral
                         if (NewViewPoint == 1)   // I will be red
