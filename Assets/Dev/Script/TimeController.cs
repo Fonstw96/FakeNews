@@ -15,6 +15,9 @@ public class TimeController : MonoBehaviour
 
     private bool bInGame = true;
 
+    public AudioClip RoundWin;
+    AudioSource audioSource;
+
     private void Start()
     {
         texClock = GetComponent<Text>();
@@ -23,6 +26,9 @@ public class TimeController : MonoBehaviour
             GameController = goUICanvas.GetComponent<ControllerProgress>();
         else
             print("No UI Canvas attached!");
+
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     void Update ()
@@ -48,11 +54,13 @@ public class TimeController : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("blueWins", PlayerPrefs.GetInt("blueWins", 0) + 1);
                     goWinText.GetComponent<Text>().text = "Player 1 won this round!";
+                    audioSource.PlayOneShot(RoundWin, 0.7F);
                 }
                 else if (GameController.iBlueVillagers < GameController.iRedVillagers)
                 {
                     PlayerPrefs.SetInt("redWins", PlayerPrefs.GetInt("redWins", 0) + 1);
                     goWinText.GetComponent<Text>().text = "Player 2 won this round!";
+                    audioSource.PlayOneShot(RoundWin, 0.7F);
                 }
                 else   // No more, no less, so equal scores!
                 {
