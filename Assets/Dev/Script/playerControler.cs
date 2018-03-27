@@ -15,9 +15,11 @@ public class playerControler : MonoBehaviour
     {
         theRB = GetComponent<Rigidbody>();
         anim = character.GetComponent<Animator>();
+        anim = character.GetComponent<Animator>();
 
         anim.Play("Idle");
         anim.Play("Player2Idle");
+
     }
 
     // Update is called once per frame
@@ -29,6 +31,20 @@ public class playerControler : MonoBehaviour
         //{
         //    theRB.velocity = new Vector3(theRB.velocity.x, jumpForce, theRB.velocity.z);
         //}
+
+        if (Input.GetAxis("Vertical" + sPlayerNo) > 0)
+        {
+            //Debug.Log("Up");
+            anim.Play("WalkFront");
+            anim.Play("Player2Front");
+        }
+
+        if (Input.GetAxis("Vertical" + sPlayerNo) < 0)
+        {
+            //Debug.Log("Down");
+            anim.Play("WalkFront");
+            anim.Play("Player2Front");
+        }
 
         if (Input.GetAxis("Horizontal" + sPlayerNo) > 0)
         {
