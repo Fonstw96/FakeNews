@@ -7,18 +7,19 @@ public class playerControler : MonoBehaviour
     public Rigidbody theRB;
 
     public GameObject character;
-    private Animator anim;
+    private Animator anim1;
+    private Animator anim2;
     //public float jumpForce;
 
     // Use this for initialization
     void Start()
     {
         theRB = GetComponent<Rigidbody>();
-        anim = character.GetComponent<Animator>();
-        anim = character.GetComponent<Animator>();
+        anim1 = character.GetComponent<Animator>();
+        anim2 = character.GetComponent<Animator>();
 
-        anim.Play("Idle");
-        anim.Play("Player2Idle");
+        anim1.Play("Idle");
+        anim2.Play("Player2Idle");
 
     }
 
@@ -35,30 +36,30 @@ public class playerControler : MonoBehaviour
         if (Input.GetAxis("Vertical" + sPlayerNo) > 0)
         {
             //Debug.Log("Up");
-            anim.Play("WalkFront");
-            anim.Play("Player2Front");
+            anim1.Play("WalkFront");
+            anim2.Play("Player2Front");
         }
 
         if (Input.GetAxis("Vertical" + sPlayerNo) < 0)
         {
             //Debug.Log("Down");
-            anim.Play("WalkFront");
-            anim.Play("Player2Front");
+            anim1.Play("WalkFront");
+            anim2.Play("Player2Front");
         }
 
         if (Input.GetAxis("Horizontal" + sPlayerNo) > 0)
         {
             //Debug.Log("right");
-            anim.Play("WalkRight");
-            anim.Play("Player2Right");
+            anim1.Play("WalkRight");
+            anim2.Play("Player2Right");
 
         }
 
         if (Input.GetAxis("Horizontal" + sPlayerNo) < 0)
         {
             //Debug.Log("left");
-            anim.Play("WalkLeft");
-            anim.Play("Player2Left");
+            anim1.Play("WalkLeft");
+            anim2.Play("Player2Left");
         }
 
     }

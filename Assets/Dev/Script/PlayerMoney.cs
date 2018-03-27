@@ -10,6 +10,9 @@ public class PlayerMoney : MonoBehaviour
     private string sPlayerNo = "1";
     public GameObject goMoneyTextBox;
     private Text tMoneyText;
+    public AudioClip PosterAudio;
+    AudioSource audioSource;
+
 
     void Start ()
     {
@@ -23,6 +26,8 @@ public class PlayerMoney : MonoBehaviour
         // If this object also has a player controller, use the same player number, otherwise the default value given at the declaration above
         if (GetComponent<playerControler>() != null)
             sPlayerNo = GetComponent<playerControler>().sPlayerNo;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionStay(Collision other)
@@ -34,6 +39,7 @@ public class PlayerMoney : MonoBehaviour
             ChangeMoney(-iPosterCost);
             // Spawn a poster at the building's position angled 45°
             Instantiate(goPoster, new Vector3(transform.position.x, .41f, transform.position.z), new Quaternion());
+            audioSource.PlayOneShot(PosterAudio, 0.7F);
         }
     }
 
