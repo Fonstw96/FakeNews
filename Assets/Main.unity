@@ -4460,7 +4460,7 @@ Prefab:
     - target: {fileID: 114182935922055984, guid: acba51f462f40b8449394f55fbc25970,
         type: 2}
       propertyPath: fStartTime
-      value: 90
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acba51f462f40b8449394f55fbc25970, type: 2}

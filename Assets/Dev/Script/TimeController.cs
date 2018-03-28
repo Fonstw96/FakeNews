@@ -60,7 +60,7 @@ public class TimeController : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("redWins", PlayerPrefs.GetInt("redWins", 0) + 1);
                     goWinText.GetComponent<Text>().text = "Player 2 won this round!";
-                    audioSource.PlayOneShot(RoundWin, 0.7F);
+                    //audioSource.PlayOneShot(RoundWin, 0.7F);
                 }
                 else   // No more, no less, so equal scores!
                 {
@@ -69,6 +69,8 @@ public class TimeController : MonoBehaviour
                     goWinText.GetComponent<Text>().text = "It's a draw!";
                 }
                 GameController.ShowWins();
+                
+                print("B: " + PlayerPrefs.GetInt("blueWins", 0) + ", R: " + PlayerPrefs.GetInt("redWins", 0));
 
                 if (PlayerPrefs.GetInt("blueWins") >= 2 && PlayerPrefs.GetInt("redWins") >= 2)
                     goWinText.GetComponent<Text>().text = "Congratulations! \n You are both horrible!";
