@@ -2,7 +2,7 @@
 
 public class playerControler : MonoBehaviour
 {
-    public string sPlayerNo = "1";
+    public int iPlayerNo = 1;
     public float moveSpeed;
     public Rigidbody theRB;
 
@@ -26,28 +26,28 @@ public class playerControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        theRB.velocity = new Vector3(Input.GetAxis("Horizontal"+sPlayerNo) * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical"+sPlayerNo) * moveSpeed);
+        theRB.velocity = new Vector3(Input.GetAxis("Horizontal" + iPlayerNo) * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical" + iPlayerNo) * moveSpeed);
 
         //if (Input.GetButtonDown("Jump"))
         //{
         //    theRB.velocity = new Vector3(theRB.velocity.x, jumpForce, theRB.velocity.z);
         //}
 
-        if (Input.GetAxis("Vertical" + sPlayerNo) > 0)
+        if (Input.GetAxis("Vertical" + iPlayerNo) > 0)
         {
             //Debug.Log("Up");
             anim1.Play("WalkFront");
             anim2.Play("Player2Front");
         }
 
-        else if (Input.GetAxis("Vertical" + sPlayerNo) < 0)
+        else if (Input.GetAxis("Vertical" + iPlayerNo) < 0)
         {
             //Debug.Log("Down");
             anim1.Play("WalkFront");
             anim2.Play("Player2Front");
         }
 
-        else if (Input.GetAxis("Horizontal" + sPlayerNo) > 0)
+        else if (Input.GetAxis("Horizontal" + iPlayerNo) > 0)
         {
             //Debug.Log("right");
             anim1.Play("WalkRight");
@@ -55,7 +55,7 @@ public class playerControler : MonoBehaviour
 
         }
 
-        else if (Input.GetAxis("Horizontal" + sPlayerNo) < 0)
+        else if (Input.GetAxis("Horizontal" + iPlayerNo) < 0)
         {
             //Debug.Log("left");
             anim1.Play("WalkLeft");
