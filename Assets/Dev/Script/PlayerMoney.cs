@@ -9,6 +9,7 @@ public class PlayerMoney : MonoBehaviour
     public const int iPosterCost = 10;
     public const int iSabotageCost = 15;
     public Sprite spSabotageSprite;
+    public string[] sSabotagingText;
     public const int iBribeCost = 25;
     private int iPlayerNo = 1;
     public GameObject goMoneyTextBox;
@@ -49,13 +50,19 @@ public class PlayerMoney : MonoBehaviour
             ChangeMoney(-iSabotageCost);
             // Change the poster's owner
             other.GetComponent<PosterWinOver>().iOwner = iPlayerNo;
-            // Change its sprite to the sabotaged thing
+            // Change its sprite to the sabotaged thing and display a foul text
             other.GetComponentInChildren<SpriteRenderer>().sprite = spSabotageSprite;
-
-            // SAMPLE SPRITE ONLY REMOVE THIS WHEN IMPLEMENTING THE ACTUAL SPRITE FOR THE LOVE OF GOD //
             foreach (Transform child in other.transform)
-                child.transform.localScale = new Vector3(5, 5, 5);
-            // SAMPLE SPRITE ONLY REMOVE THIS WHEN IMPLEMENTING THE ACTUAL SPRITE FOR THE LOVE OF GOD //
+            {
+                if (child.tag == "PosterText")
+                {
+                    // Select random text
+                    string sBlatantLie = sSabotagingText[Random.Range(0, sSabotagingText.Length)];
+
+                    // Tell it to sabotage itself for you :D
+                    child.GetComponent<PosterText>().Sabotage(sBlatantLie);
+                }
+            }
         }
     }
 

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114536231685517660}
   m_Layer: 0
   m_Name: PopUpText
-  m_TagString: Untagged
+  m_TagString: PosterText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sTexts:
   - Our king has cookies
-  fKillTime: 2
+  fKillDelay: 2
   fPopSpeed: 3
 --- !u!114 &114823012327991420
 MonoBehaviour:

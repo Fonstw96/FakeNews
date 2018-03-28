@@ -345,6 +345,8 @@ MonoBehaviour:
   beginMoney: 100
   goPoster: {fileID: 1281279572868322, guid: 77704faa2c4d3d14090bcfb6edbc855e, type: 2}
   spSabotageSprite: {fileID: 21300000, guid: d2a6a57f4fec33f41a11445becd77b17, type: 3}
+  sSabotagingText:
+  - They never bathe
   goMoneyTextBox: {fileID: 0}
 --- !u!124 &124762073705254630
 Behaviour:
