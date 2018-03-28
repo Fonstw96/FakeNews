@@ -4,7 +4,7 @@ public class PosterWinOver : MonoBehaviour
 {
     public int iOwner = 0;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         // If it's a villager...
         if (other.CompareTag("Villager"))
