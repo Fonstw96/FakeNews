@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060171987529496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0.43, z: -11.12}
+  m_LocalPosition: {x: -2.062, y: 0.48, z: -11.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4382175233919188}
@@ -100,8 +100,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1228947473244080}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0.491}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 1.05, z: 0.491}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 4274597943207292}
   m_RootOrder: 1
@@ -167,8 +167,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.98, y: 2.45, z: 1.7401059}
-  m_Center: {x: 0, y: 0.78, z: 0.41}
+  m_Size: {x: 1.5, y: 3.3, z: 3}
+  m_Center: {x: 0, y: 1.25, z: 0.5}
 --- !u!81 &81621008700475162
 AudioListener:
   m_ObjectHideFlags: 1
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sPlayerNo: 1
-  moveSpeed: 10
+  moveSpeed: 16.4
   theRB: {fileID: 54026733746906038}
   character: {fileID: 1228947473244080}
 --- !u!114 &114957828048131210
@@ -220,9 +220,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beginMoney: 100
-  iMoney: 0
   goPoster: {fileID: 1281279572868322, guid: 77704faa2c4d3d14090bcfb6edbc855e, type: 2}
   goMoneyTextBox: {fileID: 0}
+  PosterAudio: {fileID: 8300000, guid: f00255c40309cff4cb1f81f910691656, type: 3}
 --- !u!124 &124762073705254630
 Behaviour:
   m_ObjectHideFlags: 1
