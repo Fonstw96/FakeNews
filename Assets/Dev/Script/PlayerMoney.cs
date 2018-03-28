@@ -14,6 +14,7 @@ public class PlayerMoney : MonoBehaviour
     private int iPlayerNo = 1;
     public GameObject goMoneyTextBox;
     private Text tMoneyText;
+    private float fInputDelay = 0;
 
     void Start ()
     {
@@ -31,37 +32,51 @@ public class PlayerMoney : MonoBehaviour
 
     private void OnCollisionStay(Collision other)
     {
-        // If touching a Building while pushing the Interact button and having enough money for the poster...
-        if (other.collider.tag == "Building" && Input.GetButtonDown("Interact" + iPlayerNo) && iMoney >= iPosterCost)
+        // Avoid input bug
+        if (fInputDelay <= Time.time)
         {
-            // Lose poster money
-            ChangeMoney(-iPosterCost);
-            // Spawn a poster at the building's position angled 45°
-            Instantiate(goPoster, new Vector3(transform.position.x, .41f, transform.position.z), new Quaternion());
+            // If touching a Building while pushing the Interact button and having enough money for the poster...
+            if (other.collider.tag == "Building" && Input.GetButtonDown("Interact" + iPlayerNo) && iMoney >= iPosterCost)
+            {
+                // Lose poster money
+                ChangeMoney(-iPosterCost);
+                // Spawn a poster at the building's position angled 45°
+                Instantiate(goPoster, new Vector3(transform.position.x, .41f, transform.position.z), new Quaternion());
+
+                // Avoid input bug
+                fInputDelay = Time.time + 1;
+            }
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        // If within range of an enemy poster while pushing the Sabotage button and having enough money for sabotaging...
-        if (other.tag == "Poster" && other.GetComponent<PosterWinOver>().iOwner != iPlayerNo && Input.GetButtonDown("Sabotage" + iPlayerNo) && iMoney >= iSabotageCost)
+        // Avoid input bug
+        if (fInputDelay <= Time.time)
         {
-            // Lose poster money
-            ChangeMoney(-iSabotageCost);
-            // Change the poster's owner
-            other.GetComponent<PosterWinOver>().iOwner = iPlayerNo;
-            // Change its sprite to the sabotaged thing and display a foul text
-            other.GetComponentInChildren<SpriteRenderer>().sprite = spSabotageSprite;
-            foreach (Transform child in other.transform)
+            // If within range of an enemy poster while pushing the Sabotage button and having enough money for sabotaging...
+            if (other.tag == "Poster" && other.GetComponent<PosterWinOver>().iOwner != iPlayerNo && Input.GetButtonDown("Sabotage" + iPlayerNo) && iMoney >= iSabotageCost)
             {
-                if (child.tag == "PosterText")
+                // Lose poster money
+                ChangeMoney(-iSabotageCost);
+                // Change the poster's owner
+                other.GetComponent<PosterWinOver>().iOwner = iPlayerNo;
+                // Change its sprite to the sabotaged thing and display a foul text
+                other.GetComponentInChildren<SpriteRenderer>().sprite = spSabotageSprite;
+                foreach (Transform child in other.transform)
                 {
-                    // Select random text
-                    string sBlatantLie = sSabotagingText[Random.Range(0, sSabotagingText.Length)];
+                    if (child.tag == "PosterText")
+                    {
+                        // Select random text
+                        string sBlatantLie = sSabotagingText[Random.Range(0, sSabotagingText.Length)];
 
-                    // Tell it to sabotage itself for you :D
-                    child.GetComponent<PosterText>().Sabotage(sBlatantLie);
+                        // Tell it to sabotage itself for you :D
+                        child.GetComponent<PosterText>().Sabotage(sBlatantLie);
+                    }
                 }
+
+                // Avoid input bug
+                fInputDelay = Time.time + 1;
             }
         }
     }
