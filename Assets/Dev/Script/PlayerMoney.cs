@@ -39,7 +39,7 @@ public class PlayerMoney : MonoBehaviour
             ChangeMoney(-iPosterCost);
             // Spawn a poster at the building's position angled 45°
             Instantiate(goPoster, new Vector3(transform.position.x, .41f, transform.position.z), new Quaternion());
-            audioSource.PlayOneShot(PosterAudio, 0.7F);
+            //audioSource.PlayOneShot(PosterAudio, 0.7F);
         }
     }
 

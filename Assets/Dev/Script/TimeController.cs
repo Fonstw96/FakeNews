@@ -54,7 +54,7 @@ public class TimeController : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("blueWins", PlayerPrefs.GetInt("blueWins", 0) + 1);
                     goWinText.GetComponent<Text>().text = "Player 1 won this round!";
-                    audioSource.PlayOneShot(RoundWin, 0.7F);
+                    //audioSource.PlayOneShot(RoundWin, 0.7F);
                 }
                 else if (GameController.iBlueVillagers < GameController.iRedVillagers)
                 {
@@ -68,6 +68,7 @@ public class TimeController : MonoBehaviour
                     PlayerPrefs.SetInt("redWins", PlayerPrefs.GetInt("redWins", 0) + 1);
                     goWinText.GetComponent<Text>().text = "It's a draw!";
                 }
+                GameController.ShowWins();
 
                 if (PlayerPrefs.GetInt("blueWins") >= 2 && PlayerPrefs.GetInt("redWins") >= 2)
                     goWinText.GetComponent<Text>().text = "Congratulations! \n You are both horrible!";
@@ -75,7 +76,6 @@ public class TimeController : MonoBehaviour
                     goWinText.GetComponent<Text>().text = "Congratulations player 1! \n You are the biggest liar!";
                 else if (PlayerPrefs.GetInt("redWins") >= 2)
                     goWinText.GetComponent<Text>().text = "Congratulations player 2! \n You are the biggest liar!";
-                GameController.ShowWins();
 
                 if (PlayerPrefs.GetInt("blueWins") >= 2 || PlayerPrefs.GetInt("redWins") >= 2)
                 {
@@ -93,6 +93,9 @@ public class TimeController : MonoBehaviour
         while (!Input.GetButton("Interact1") && !Input.GetButton("Interact2") && !Input.GetButton("Escape"))
             yield return null;
         
-        SceneManager.LoadScene("Main");
+        if (PlayerPrefs.GetInt("blueWins") == 0 && PlayerPrefs.GetInt("redWins") == 0)
+            SceneManager.LoadScene("Intro");
+        else
+            SceneManager.LoadScene("Main");
     }
 }
